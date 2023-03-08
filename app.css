@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body{
+    background-color: #D6FAE7;
+}
+
+nav{
+    height: 5rem;
+    background-color: #1FAB89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    height: 75px;
+    width: 250px;
+}
+.content{
+    display: flex;
+    width:100vw;
+    justify-content: center;
+}
+
+.left-card{
+    background-color: black;
+    width: 40vw;
+    align-items: center;
+    height: 50vh;
+    border: 2px solid black;
+    align-items: center;
+    margin: 3rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner{
+    height:6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    outline: none;
+    justify-content: center;
+    background-color: #1FAB89;
+    border-radius: 25px;
+    /* border: 2px solid black; */
+    border-top: none;
+}
+
+.banner h3{
+    font-size:1.75rem;
+    font-weight: bold;
+}
+
+input{
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 80%;
+    text-align: center;
+    height: 5vh;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+.suggestions{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+.suggestions h3{
+    color: white;
+    font-size:1rem;
+    text-align: center;
+}
+
+.find{
+    height: 5vh;
+    width: 20%;
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+button{
+    height: 3vh;
+    border:2px solid black;
+    outline: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.75rem;
+    background-color:white;
+}
+
+button:hover{
+    background-color:#1FAB89;
+}
+
+.scanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.scanner button{
+    height: 5vh;
+    width: 15%;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    background-color:white;
+}
+
+.scanner button a{
+text-decoration: none;
+color: black;
+}
+
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:4rem;
+    font-size:2rem;
+    font-weight: bold;
+}
