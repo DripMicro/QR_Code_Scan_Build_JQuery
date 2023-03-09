@@ -15,7 +15,7 @@
     <div id="app"></div>  
   </div>
   <div id="app"></div>
-  <p id="demo">114</p>
+  <p id="demo">1214</p>
 
 </body>
   <script>
@@ -37,6 +37,7 @@
     function StopQR() {
         clearInterval(myInterval);
         $("script[src*='/assets/QRcodeScan.js']").remove();
+        document.getElementById("app").innerHTML = "";
     }
   </script>
 
