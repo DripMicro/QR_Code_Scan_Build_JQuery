@@ -13,7 +13,7 @@
 <body>
   <button class="showQR"> show QR </button>
   <div id="app"></div>
-  <p id="demo">1121</p>
+  <p id="demo">1123</p>
 
 </body>
   <script>
@@ -22,7 +22,7 @@
       
     }); 
     const element = document.getElementById("demo");
-    setInterval(function() {element.innerHTML += document.getElementById("qrcodetext").text();}, 1000);
+    setInterval(function() {element.innerHTML += document.getElementById("qrcodetext").innerHTML;}, 1000);
   </script>
 
 
