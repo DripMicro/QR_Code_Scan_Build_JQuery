@@ -13,12 +13,14 @@
 <body>
   <button class="showQR"> show QR </button>
   <div id="app"></div>
-  
+  <p id="demo"></p>
+
 </body>
   <script>
     $(".showQR").click(function(){
       $.getScript("/assets/index.cf6cb95a.js");
-      setInterval(function() {var res = $('.qrcodetext').text(); console.log(res);}, 1000);
+      const element = document.getElementById("demo");
+      setInterval(function() {element.innerHTML += $('.qrcodetext').text(); console.log(res);}, 1000);
     }); 
   </script>
 
