@@ -6,13 +6,19 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qrscan</title>
-  <script type="module" crossorigin src="/assets/index.6b78595d.js"></script>
-  <link rel="stylesheet" href="/assets/index.1a687dc2.css">
+  <!-- <script type="module" crossorigin src="/assets/index.d9015fa1.js"></script> -->
+  <link rel="stylesheet" href="/assets/index.de5fb8e5.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
+  <button class="showQR"> show QR </button>
   <div id="app"></div>
   
 </body>
-
+  <script>
+    $(".showQR").click(function(){
+      $.getScript("/assets/index.d9015fa1.js");
+    }); 
+  </script>
 </html>
