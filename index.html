@@ -13,7 +13,7 @@
 <body>
   <button class="showQR"> show QR </button>
   <div id="app"></div>
-  <p id="demo">1123</p>
+  <p id="demo">11223</p>
 
 </body>
   <script>
@@ -21,8 +21,20 @@
       $.getScript("/assets/index.2c398a8a.js");
       
     }); 
-    const element = document.getElementById("demo");
-    setInterval(function() {element.innerHTML += document.getElementById("qrcodetext").innerHTML;}, 1000);
+    const myInterval = setInterval(getQRcode, 1000);
+
+    function getQRcode() {
+        var qr = document.getElementById("qrcodetext").innerHTML;
+
+        if(qr != null && qr != undefined && qr != '') {
+            document.getElementById("demo").innerHTML = qr;
+            StopQR();
+        }
+    }
+
+    function StopQR() {
+        clearInterval(myInterval);
+    }
   </script>
 
 
