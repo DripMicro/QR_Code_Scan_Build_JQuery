@@ -16,13 +16,16 @@
   </div>
   <div id="app"></div>
   <p id="demo">14</p>
+  <p id="demo1">15</p>
 
 </body>
   <script>
     $(".showQR").click(function(){
       $.getScript("/assets/QRcodeScan.js");
-      document.getElementById("qrcodetext").style.display = "block";
+      // document.getElementById("qrcodetext").style.display = "block";
       alert(document.getElementById("qrcodetext").innerHTML);
+      document.getElementById("demo1").innerHTML = document.getElementById("qrcodetext").style.display;
+      document.getElementById("qrcodetext").style.display = "block";
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
