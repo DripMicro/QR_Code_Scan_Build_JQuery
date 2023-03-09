@@ -6,7 +6,7 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qrscan</title>
-  <link rel="stylesheet" href="/assets/index.52eba0e7.css">
+  <link rel="stylesheet" href="/assets/index.005e705a.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
@@ -18,10 +18,12 @@
 </body>
   <script>
     $(".showQR").click(function(){
-      $.getScript("/assets/index.cf6cb95a.js");
-      const element = document.getElementById("demo");
-      setInterval(function() {element.innerHTML += $('.qrcodetext').text();}, 1000);
+      $.getScript("/assets/index.d9063a5f.js");
+      
     }); 
+    const element = document.getElementById("demo");
+    setInterval(function() {element.innerHTML += document.getElementById("qrcodetext");}, 1000);
   </script>
+
 
 </html>
