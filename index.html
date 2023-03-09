@@ -27,7 +27,7 @@
       if (flag)      
         $.getScript("/assets/QRcodeScan.js");
       else {
-        document.getElementById("qrcodetext").style.display = "block";
+        document.getElementById("qrcodetext").innerHTML = "";
         document.getElementById("streambarcodeid").style.display = "block";
       }
     }); 
@@ -45,7 +45,6 @@
 
     function StopQR() {
         clearInterval(myInterval);
-        document.getElementById("qrcodetext").style.display = "none";
         document.getElementById("streambarcodeid").style.display = "none";
         flag = false;
     }
