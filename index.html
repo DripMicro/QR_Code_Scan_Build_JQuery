@@ -6,21 +6,20 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qrscan</title>
-  <link rel="stylesheet" href="/assets/index.e2a2ec74.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
   <button class="showQR"> show QR </button>
   <div id="app"></div>
-  <p id="demo">11223</p>
+  <p id="demo">113</p>
 
 </body>
   <script>
     $(".showQR").click(function(){
-      $.getScript("/assets/index.2c398a8a.js");
-      
+      $.getScript("QRcodeScan.js");
     }); 
+
     const myInterval = setInterval(getQRcode, 1000);
 
     function getQRcode() {
