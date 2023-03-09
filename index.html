@@ -26,13 +26,13 @@
       alert(document.getElementById("qrcodetext").innerHTML);
       document.getElementById("demo1").innerHTML = document.getElementById("qrcodetext").style.display;
       document.getElementById("qrcodetext").style.display = "block";
+      document.getElementById("streambarcodeid").style.display = "block";
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
 
     function getQRcode() {
         var qr = document.getElementById("qrcodetext").innerHTML;
-        document.getElementById("qrcodetext").style.display = "block";
 
         if(qr != null && qr != undefined && qr != '') {
             document.getElementById("demo").innerHTML = qr;
@@ -43,6 +43,7 @@
     function StopQR() {
         clearInterval(myInterval);
         document.getElementById("qrcodetext").style.display = "none";
+        document.getElementById("streambarcodeid").style.display = "none";
     }
   </script>
 
