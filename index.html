@@ -15,13 +15,13 @@
     <div id="app"></div>  
   </div>
   <div id="app"></div>
-  <p id="demo">1134</p>
+  <p id="demo">114</p>
 
 </body>
   <script>
     $(".showQR").click(function(){
       $.getScript("/assets/QRcodeScan.js");
-      document.getElementById("streambarcodeid").style.display = "block";
+      // document.getElementById("streambarcodeid").style.display = "block";
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
