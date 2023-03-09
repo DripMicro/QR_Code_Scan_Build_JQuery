@@ -1,47 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Vue Test</title>
 
-    <!-- This is a development version of Vue.js! -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/nlinks-vue-barcode@1.0.2/src/index.min.js"></script>
-    <!-- import stylesheet -->
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qrscan</title>
+  <script type="module" crossorigin src="/assets/index.11b45362.js"></script>
+  <link rel="stylesheet" href="/assets/index.f5425e10.css">
+</head>
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-  </head>
+<body>
 
-  <body>
-    <!-- Basic usage -->
+  <button onclick="myFunction()">Click Me</button>
+  <div id="app">
 
-    <div id="app_basic" v-bind:title="timestamp" class="experiment-block">{{ message }}</div>
-    <!-- <barcode v-bind:value="decodedText"></barcode>
-    <h2>{{ decodedText }}</h2> -->
-    <StreamBarcodeReader @decode="onDetect"></StreamBarcodeReader>
-    <script>
-      new Vue({
-        el: "#app_basic",
-        data: {
-          message: "🐵 Hello World 🔮",
-          decodedText: '',
-          timestamp: `Timestamp ${new Date().toLocaleString()}`,
-        },
-        methods: {
-            async onDetect (promise) {
-                try {
-                const {
-                    content,      // decoded String
-                    location      // QR code coordinates
-                } = await promise
+  </div>
+  
+</body>
 
-                // ...
-                } catch (error) {
-                // ...
-                }
-            }
-        }
-      })
-    </script>
-  </body>
+<script>
+  function myFunction() {
+    var x = document.getElementById("app");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
 </html>
