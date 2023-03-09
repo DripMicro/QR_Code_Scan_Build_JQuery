@@ -22,6 +22,7 @@
     $(".showQR").click(function(){
       $.getScript("/assets/QRcodeScan.js");
       document.getElementById("qrcodetext").style.display = "block";
+      alert(document.getElementById("qrcodetext").innerHTML);
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
