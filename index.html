@@ -15,18 +15,20 @@
     <div id="app"></div>  
   </div>
   <div id="app"></div>
-  <p id="demo">1214</p>
+  <p id="demo">14</p>
 
 </body>
   <script>
     $(".showQR").click(function(){
       $.getScript("/assets/QRcodeScan.js");
+      document.getElementById("qrcodetext").style.display = "block";
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
 
     function getQRcode() {
         var qr = document.getElementById("qrcodetext").innerHTML;
+        document.getElementById("qrcodetext").style.display = "none";
 
         if(qr != null && qr != undefined && qr != '') {
             document.getElementById("demo").innerHTML = qr;
@@ -36,8 +38,6 @@
 
     function StopQR() {
         clearInterval(myInterval);
-        $("script[src*='/assets/QRcodeScan.js']").remove();
-        document.getElementById("app").innerHTML = "";
     }
   </script>
 
