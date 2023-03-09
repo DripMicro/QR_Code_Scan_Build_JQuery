@@ -20,6 +20,7 @@
 </body>
   <script>
     var flag = true;
+    let myInterval;
 
     $(".showQR").click(function(){
       // document.getElementById("qrcodetext").style.display = "block";
@@ -29,10 +30,10 @@
       else {
         document.getElementById("qrcodetext").innerHTML = "";
         document.getElementById("streambarcodeid").style.display = "block";
+        let myInterval = setInterval(getQRcode, 1000);
       }
     }); 
-
-    const myInterval = setInterval(getQRcode, 1000);
+   
 
     function getQRcode() {
         var qr = document.getElementById("qrcodetext").innerHTML;
