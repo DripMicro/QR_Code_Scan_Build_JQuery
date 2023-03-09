@@ -47,6 +47,7 @@
     function StopQR() {
         clearInterval(myInterval);
         document.getElementById("streambarcodeid").style.display = "none";
+        document.getElementById("qrcodetext").innerHTML = "";
         flag = false;
     }
   </script>
