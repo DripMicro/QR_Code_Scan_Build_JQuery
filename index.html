@@ -21,6 +21,7 @@
   <script>
     $(".showQR").click(function(){
       $.getScript("/assets/QRcodeScan.js");
+      document.getElementById("streambarcodeid").style.display = "block";
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
