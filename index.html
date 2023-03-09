@@ -23,10 +23,13 @@
 
     $(".showQR").click(function(){
       // document.getElementById("qrcodetext").style.display = "block";
-      document.getElementById("qrcodetext").style.display = "block";
-      document.getElementById("streambarcodeid").style.display = "block";
+      
       if (flag)      
         $.getScript("/assets/QRcodeScan.js");
+      else {
+        document.getElementById("qrcodetext").style.display = "block";
+        document.getElementById("streambarcodeid").style.display = "block";
+      }
     }); 
 
     const myInterval = setInterval(getQRcode, 1000);
