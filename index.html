@@ -19,11 +19,13 @@
 
 </body>
   <script>
+    var flag = true;
+
     $(".showQR").click(function(){
       // document.getElementById("qrcodetext").style.display = "block";
       document.getElementById("qrcodetext").style.display = "block";
       document.getElementById("streambarcodeid").style.display = "block";
-      if (!document.getElementById("qrcodetext") || document.getElementById("qrcodetext").style.display != "none")      
+      if (flag)      
         $.getScript("/assets/QRcodeScan.js");
     }); 
 
@@ -42,6 +44,7 @@
         clearInterval(myInterval);
         document.getElementById("qrcodetext").style.display = "none";
         document.getElementById("streambarcodeid").style.display = "none";
+        flag = false;
     }
   </script>
 
