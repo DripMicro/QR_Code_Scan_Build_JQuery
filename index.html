@@ -28,7 +28,6 @@
       if (flag)      
         $.getScript("/assets/QRcodeScan.js");
       else {
-        document.getElementById("qrcodetext").innerHTML = "";
         document.getElementById("streambarcodeid").style.display = "block";
       }
       myInterval = setInterval(getQRcode, 1000);
@@ -47,7 +46,6 @@
     function StopQR() {
         clearInterval(myInterval);
         document.getElementById("streambarcodeid").style.display = "none";
-        document.getElementById("qrcodetext").innerHTML = "";
         flag = false;
     }
   </script>
